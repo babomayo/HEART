@@ -29,8 +29,8 @@ highlight_points_color_2: # 高光粒子色2 默认淡粉色
   - 196
 
 times: 999999
-frame_num: 60  # 一个周期的生成帧数
-wait: 20  # 每一帧停留时间, 设置太短可能造成闪屏，设置 -1 自动设置为 period_time / frame_num
+frame_num: 30  # 一个周期的生成帧数
+wait: 50  # 每一帧停留时间, 设置太短可能造成闪屏，设置 -1 自动设置为 period_time / frame_num
 seed_points_num: 5000  # 构成主图的种子粒子数，总粒子数是这个的8倍左右（包括散点和光晕）
 highlight_rate: 0.5 # 高光粒子的比例
 frame_width: 1920  # 窗口宽度，单位像素，设置背景图片后失效
