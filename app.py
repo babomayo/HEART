@@ -5,7 +5,6 @@ from math import cos, pi
 import numpy as np
 import cv2
 import os, glob
-import tkinter as tk
 import time
 
 class HeartSignal:
