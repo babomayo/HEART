@@ -454,9 +454,7 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    print("Máy chủ đang chạy tại http://localhost:3000/")
-    print("Mở trình duyệt của bạn và truy cập địa chỉ này.")
-    # Sử dụng một WSGI server tốt hơn cho streaming, ví dụ waitress
-    # app.run(host='0.0.0.0', port=3000, debug=False, threaded=True)
+    port = int(os.environ.get('PORT', 3000))
+    print(f"Máy chủ đang chạy tại cổng {port}")
     from waitress import serve
-    serve(app, host='0.0.0.0', port=3000)
+    serve(app, host='0.0.0.0', port=port)
