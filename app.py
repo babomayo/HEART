@@ -454,7 +454,8 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 3000))
+    # Lấy SERVER_PORT do Botkeep cấp phát tự động
+    port = int(os.environ.get('SERVER_PORT', os.environ.get('PORT', 3000)))
     print(f"Máy chủ đang chạy tại cổng {port}")
     from waitress import serve
     serve(app, host='0.0.0.0', port=port)
